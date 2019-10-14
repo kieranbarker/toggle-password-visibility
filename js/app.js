@@ -9,6 +9,6 @@
     password.type = (this.checked) ? "text" : "password";
   }
 
-  toggle.addEventListener("change", togglePassword);
+  toggle.addEventListener("change", togglePassword, false);
 
 })(document);

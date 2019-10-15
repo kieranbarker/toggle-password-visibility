@@ -3,9 +3,9 @@
   "use strict";
 
   var toggle = d.querySelector("#show-password");
+  var password = d.querySelector("#password");
 
   function togglePassword() {
-    var password = d.querySelector("#password");
     password.type = (this.checked) ? "text" : "password";
   }
 

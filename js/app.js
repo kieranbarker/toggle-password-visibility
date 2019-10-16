@@ -2,15 +2,19 @@
 
   "use strict";
 
-  var toggle = d.querySelector("#show-password");
-  var password = d.querySelector("#password");
+  var toggle = d.querySelector("#show-passwords");
+  var passwords = d.querySelectorAll("[type='password']");
 
-  function togglePassword() {
-    password.type = (this.checked) ? "text" : "password";
+  function togglePassword(field) {
+    field.type = (toggle.checked) ? "text" : "password";
   }
 
-  if (toggle.checked) password.type = "text";
+  function toggleAllPasswords() {
+    passwords.forEach(togglePassword);
+  }
 
-  toggle.addEventListener("change", togglePassword, false);
+  if (toggle.checked) toggleAllPasswords();
+
+  toggle.addEventListener("change", toggleAllPasswords, false);
 
 })(document);

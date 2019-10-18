@@ -2,7 +2,7 @@
 
   "use strict";
 
-  var forms = document.querySelectorAll("form");
+  var forms = d.querySelectorAll("form");
   
   function togglePassword(field) {
     field.type = (event.target.checked) ? "text" : "password";
@@ -23,9 +23,10 @@
   }
 
   // Firefox persists checkbox state, so for each form,
-  // toggle its password(s) on page load if its checkbox is checked
+  // toggle its password(s) on page load
+  // forms.forEach(togglePasswordsOnLoad);
   forms.forEach(togglePasswordsOnLoad);
 
-  document.body.addEventListener("change", toggleAllPasswords, false);
+  d.body.addEventListener("change", toggleAllPasswords, false);
 
 })(document);

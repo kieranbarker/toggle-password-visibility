@@ -24,7 +24,6 @@
 
   // Firefox persists checkbox state, so for each form,
   // toggle its password(s) on page load
-  // forms.forEach(togglePasswordsOnLoad);
   forms.forEach(togglePasswordsOnLoad);
 
   d.body.addEventListener("change", toggleAllPasswords, false);

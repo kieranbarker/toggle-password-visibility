@@ -2,19 +2,25 @@
 
   "use strict";
 
-  var toggle = d.querySelector("#show-passwords");
-  var passwords = d.querySelectorAll("[type='password']");
-
+  var toggles = d.querySelectorAll("[data-toggle]");
+  
   function togglePassword(field) {
-    field.type = (toggle.checked) ? "text" : "password";
+    field.type = (event.target.checked) ? "text" : "password";
   }
 
-  function toggleAllPasswords() {
+  function toggleAllPasswords(event) {
+    if (!event.target.hasAttribute("data-toggle")) return;
+    var passwords = event.target.closest("form").querySelectorAll("[data-password]");
     passwords.forEach(togglePassword);
   }
 
-  if (toggle.checked) toggleAllPasswords();
+  function resetToggle(toggle) {
+    toggle.checked = false;
+  }
 
-  toggle.addEventListener("change", toggleAllPasswords, false);
+  // Reset each toggle when the page loads because Firefox caches checkbox state
+  toggles.forEach(resetToggle);
+
+  d.body.addEventListener("change", toggleAllPasswords, false);
 
 })(document);

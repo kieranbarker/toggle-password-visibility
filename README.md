@@ -12,4 +12,8 @@ Allow users to toggle a single password field.
 
 Refactor the project to allow users to toggle multiple password fields at once.
 
+## Part 3
+
+Refactor the project again to allow users to toggle multiple password fields at once **across multiple forms**.
+
 [View Demo](https://kieranbarker.github.io/toggle-password-visibility/)

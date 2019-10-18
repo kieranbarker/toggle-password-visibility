@@ -2,7 +2,7 @@
 
   "use strict";
 
-  var forms = d.querySelectorAll("form");
+  var toggles = d.querySelectorAll("[data-toggle]");
   
   function togglePassword(field) {
     field.type = (event.target.checked) ? "text" : "password";
@@ -14,17 +14,12 @@
     passwords.forEach(togglePassword);
   }
 
-  function togglePasswordsOnLoad(form) {
-    var toggle = form.querySelector("[data-toggle]");
-    var passwords = form.querySelectorAll("[data-password]");
-    passwords.forEach(function(password) {
-      password.type = (toggle.checked) ? "text" : "password";
-    });
+  function resetToggle(toggle) {
+    toggle.checked = false;
   }
 
-  // Firefox persists checkbox state, so for each form,
-  // toggle its password(s) on page load
-  forms.forEach(togglePasswordsOnLoad);
+  // Reset each toggle when the page loads because Firefox caches checkbox state
+  toggles.forEach(resetToggle);
 
   d.body.addEventListener("change", toggleAllPasswords, false);
 

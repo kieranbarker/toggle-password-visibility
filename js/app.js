@@ -3,7 +3,7 @@
   "use strict";
 
   var toggles = d.querySelectorAll("[data-toggle]");
-  
+
   function togglePassword(field) {
     field.type = (event.target.checked) ? "text" : "password";
   }

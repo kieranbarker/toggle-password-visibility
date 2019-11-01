@@ -2,7 +2,7 @@
 
 A script that lets users toggle the visibility of password fields.
 
-My first project as part of the [Vanilla JS Academy](https://vanillajsacademy.com/) :-)
+My first project as part of the [Vanilla JS Academy](https://vanillajsacademy.com/) 😊
 
 ## Part 1
 

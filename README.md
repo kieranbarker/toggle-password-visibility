@@ -1,6 +1,6 @@
 # Toggle Password Visibility
 
-A script that lets users toggle the visibility of password fields.
+A simple demonstration of toggling the visibility of password fields using vanilla JavaScript.
 
 My first project as part of the [Vanilla JS Academy](https://vanillajsacademy.com/) :-)
 
@@ -16,4 +16,4 @@ Refactor the project to allow users to toggle multiple password fields at once.
 
 Refactor the project again to allow users to toggle multiple password fields at once **across multiple forms**.
 
-[View Demo](https://kieranbarker.github.io/toggle-password-visibility/)
+[**View Demo 🖥**](https://kieranbarker.github.io/toggle-password-visibility/)

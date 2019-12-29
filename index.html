@@ -8,49 +8,61 @@
     <link href="css/app.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Toggle Password Visibility</h1>
-    <h2>Change Username</h2>
-    <p>Enter your username and password to change your username.</p>
-    <form>
-      <div>
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username">
-      </div>
-      <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" data-password>
-      </div>
-      <div>
-        <label for="show-password">
-          <input type="checkbox" name="show-password" id="show-password" data-toggle>
-          Show password
-        </label>
-      </div>
+    <header>
+      <h1>Toggle Password Visibility</h1>
+      <p>A simple demonstration of toggling the visibility of password fields using vanilla JavaScript.</p>
       <p>
-        <button type="submit">Change Username</button>
+        <a href="https://github.com/kieranbarker/toggle-password-visibility">View the repository on GitHub</a>
       </p>
-    </form>
-    <h2>Change Password</h2>
-    <p>Enter your current password and new password below.</p>
-    <form>
-      <div>
-        <label for="current-password">Current Password</label>
-        <input type="password" name="current-password" id="current-password" data-password>
-      </div>
-      <div>
-        <label for="new-password">New Password</label>
-        <input type="password" name="new-password" id="new-password" data-password>
-      </div>
-      <div>
-        <label for="show-passwords">
-          <input type="checkbox" name="show-passwords" id="show-passwords" data-toggle>
-          Show passwords
-        </label>
-      </div>
-      <p>
-        <button type="submit">Change Passwords</button>
-      </p>
-    </form>
+    </header>
+    <main>
+      <section>
+        <h2>Change Username</h2>
+        <p>Enter your username and password to change your username.</p>
+        <form>
+          <div class="mb1">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+          </div>
+          <div class="mb1">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" data-password>
+          </div>
+          <div>
+            <label class="mb1" for="show-password">
+              <input type="checkbox" name="show-password" id="show-password" data-toggle>
+              Show password
+            </label>
+          </div>
+          <p>
+            <button type="submit">Change Username</button>
+          </p>
+        </form>
+      </section>
+      <section>
+        <h2>Change Password</h2>
+        <p>Enter your current password and new password below.</p>
+        <form>
+          <div class="mb1">
+            <label for="current-password">Current Password</label>
+            <input type="password" name="current-password" id="current-password" data-password>
+          </div>
+          <div class="mb1">
+            <label for="new-password">New Password</label>
+            <input type="password" name="new-password" id="new-password" data-password>
+          </div>
+          <div class="mb1">
+            <label for="show-passwords">
+              <input type="checkbox" name="show-passwords" id="show-passwords" data-toggle>
+              Show passwords
+            </label>
+          </div>
+          <p>
+            <button type="submit">Change Passwords</button>
+          </p>
+        </form>
+      </section>
+    </main>
     <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=NodeList.prototype.forEach%2Cdefault"></script>
     <script src="js/app.js"></script>
   </body>

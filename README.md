@@ -2,7 +2,7 @@
 
 A simple demonstration of toggling the visibility of password fields using vanilla JavaScript.
 
-My first project as part of the [Vanilla JS Academy](https://vanillajsacademy.com/) :-)
+My first project as part of the [Vanilla JS Academy](https://vanillajsacademy.com/) 😊
 
 ## Part 1
 

@@ -39,7 +39,9 @@
     if (!form) return;
 
     // Get all password fields inside this form
-    var passwords = form.querySelectorAll("[data-password]");
+    var passwords = Array.from(
+      form.querySelectorAll("[data-password]")
+    );
 
     // Toggle the password fields
     passwords.forEach(function (password) {

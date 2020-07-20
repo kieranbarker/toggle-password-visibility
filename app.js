@@ -17,9 +17,10 @@
 
   /**
    * Toggle the visibility of a single password field
-   * @param {Node} password The password field
+   * @param {Object} password The password field
+   * @param {Object} event    The Event object
    */
-  function togglePassword (password) {
+  function togglePassword (password, event) {
     password.type = event.target.checked ? "text" : "password";
   }
 
@@ -41,7 +42,9 @@
     var passwords = form.querySelectorAll("[data-password]");
 
     // Toggle the password fields
-    passwords.forEach(togglePassword);
+    passwords.forEach(function (password) {
+      togglePassword(password, event);
+    });
 
   }
 

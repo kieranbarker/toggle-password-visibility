@@ -1,26 +1,56 @@
-;(function(d) {
+;(function () {
 
+  // Opt into ES5 strict mode
   "use strict";
 
-  var toggles = d.querySelectorAll("[data-toggle]");
+  //
+  // Variables
+  //
 
-  function togglePassword(field) {
-    field.type = (event.target.checked) ? "text" : "password";
+  // Get the main element
+  var main = document.querySelector("main");
+
+
+  //
+  // Functions
+  //
+
+  /**
+   * Toggle the visibility of a single password field
+   * @param {Node} password The password field
+   */
+  function togglePassword (password) {
+    password.type = event.target.checked ? "text" : "password";
   }
 
-  function toggleAllPasswords(event) {
-    if (!event.target.hasAttribute("data-toggle")) return;
-    var passwords = event.target.closest("form").querySelectorAll("[data-password]");
+  /**
+   * Toggle all password fields inside a single form
+   * @param {Object} event The Event object
+   */
+  function togglePasswords (event) {
+
+    // If this isn't a password toggle, do nothing
+    if (!event.target.matches("[data-toggle]")) return;
+
+    // Get the closest form
+    // If it doesn't exist, do nothing
+    var form = event.target.form;
+    if (!form) return;
+
+    // Get all password fields inside this form
+    var passwords = form.querySelectorAll("[data-password]");
+
+    // Toggle the password fields
     passwords.forEach(togglePassword);
+
   }
 
-  function resetToggle(toggle) {
-    toggle.checked = false;
-  }
 
-  // Reset each toggle when the page loads because Firefox caches checkbox state
-  toggles.forEach(resetToggle);
+  //
+  // Init
+  //
 
-  d.body.addEventListener("change", toggleAllPasswords, false);
+  // Toggle password fields on change
+  main.addEventListener("change", togglePasswords);
 
-})(document);
+})();

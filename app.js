@@ -52,7 +52,7 @@
 
 
   //
-  // Init
+  // Inits & Event Listeners
   //
 
   // Toggle password fields on change
